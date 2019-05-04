@@ -1,0 +1,13 @@
+.app {
+  padding: 0 1rem;
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 940px) {
+  .app {
+    background: #eee;
+    padding: 0;
+  }
+}

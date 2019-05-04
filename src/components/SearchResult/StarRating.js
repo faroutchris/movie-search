@@ -1,0 +1,20 @@
+import React from "react";
+import StarFull from "./../../assets/star-full.svg";
+import StarHalf from "./../../assets/star-half.svg";
+
+const StarRating = ({ score }) => {
+  const stars = [];
+
+  for (let i = 0; i < score; i++) {
+    if (i + 1 <= score) {
+      stars.push(<img src={StarFull} key={i} alt={score} />);
+    }
+    if (i + 0.5 === score) {
+      stars.push(<img src={StarHalf} key={i} alt={score} />);
+    }
+  }
+
+  return stars;
+};
+
+export default StarRating;

@@ -1,0 +1,21 @@
+.form {
+  padding: 2rem 0;
+}
+
+.search {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #223323;
+  background: url(./../../assets/search.svg) no-repeat 1rem center scroll;
+  background-size: 1.4rem 1.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+
+  padding: 1rem 1rem 1rem 3.5rem;
+  color: #223323;
+  outline: none;
+}
+
+.search::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}

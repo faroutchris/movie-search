@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import { withRouter } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import "./SearchForm.css";
 
-const SearchForm = ({ history, setQuery, onSearch }) => {
+const SearchForm = ({ setQuery, onSearch }) => {
   const searchRef = useRef(null);
 
   const handleSearch = event => {
-    history.push("/");
     onSearch(event);
+    return <Redirect to="/" />;
   };
 
   return (
@@ -16,11 +16,11 @@ const SearchForm = ({ history, setQuery, onSearch }) => {
         className="search"
         ref={searchRef}
         type="search"
-        placeholder="Type and press Enter to search."
+        placeholder="Search movies."
         onChange={() => setQuery(searchRef.current.value)}
       />
     </form>
   );
 };
 
-export default withRouter(SearchForm);
+export default SearchForm;

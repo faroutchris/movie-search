@@ -1,20 +1,34 @@
 import React from "react";
 import StarRating from "./StarRating";
+import PosterImage from "./PosterImage";
 
 const Item = ({ result }) => (
-  <div>
-    <h2>
-      {result.title} ({result.year})
-    </h2>
-    <p>
-      <StarRating score={result.score} /> ({result.votes})
-    </p>
-    <img key={result.id} alt={result.title} src={result.poster} />
-    {result.genres.map((genre, i) => (
-      <span key={i} style={{ backgroundColor: `${genre.color}` }}>
-        {genre.name}
-      </span>
-    ))}
+  <div className="item">
+    <PosterImage alt={result.title} src={result.poster} />
+    <div className="details">
+      <div className="title-container">
+        <h2 className="title">{result.title}</h2>
+        <p className="year">{result.year}</p>
+      </div>
+
+      <div className="stars">
+        <StarRating score={result.score} />
+      </div>
+
+      <p className="overview">{result.overview}</p>
+
+      <div className="genre-container">
+        {result.genres.map((genre, i) => (
+          <span
+            className="genre"
+            key={i}
+            style={{ backgroundColor: `${genre.color}` }}
+          >
+            {genre.name}
+          </span>
+        ))}
+      </div>
+    </div>
   </div>
 );
 

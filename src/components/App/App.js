@@ -41,9 +41,12 @@ const App = () => {
     have to supply props down the component hierarchy.
     The state in the app is simple enough to keep at this top level component imo.
   */
+
   const searchResultComponent = !error && !loading && (
     <List searchResults={searchResults} pages={pages} />
   );
+
+  const paginationComponent = !error && !loading && <div>{pages}</div>;
 
   return (
     <div className="app">
@@ -54,10 +57,12 @@ const App = () => {
         <Route
           path="/"
           exact
-          component={() =>
-            !error &&
-            !loading && <Root searchResultComponent={searchResultComponent} />
-          }
+          component={() => (
+            <Root
+              searchResultComponent={searchResultComponent}
+              paginationComponent={paginationComponent}
+            />
+          )}
         />
         <Route path="movie/:id" exact component={null} />
       </Router>

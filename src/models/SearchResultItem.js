@@ -38,7 +38,7 @@ export default class SearchResult {
     const count = this.data.vote_count;
 
     if (count === 0) {
-      return "No votes";
+      return "No rating";
     }
     if (count === 1) {
       return "1 vote";
@@ -55,7 +55,7 @@ export default class SearchResult {
   }
 
   get overview() {
-    return this.data.overview;
+    return this.data.overview.slice(0, 120) + "...";
   }
 
   mapVoteToScore(value) {

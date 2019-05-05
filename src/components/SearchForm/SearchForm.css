@@ -1,5 +1,5 @@
 .form {
-  padding: 2rem 0;
+  padding: 3rem 0 4rem;
 }
 
 .search {
@@ -20,4 +20,11 @@
 
 .search::placeholder {
   color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    background-position: 1.5rem center;
+    padding: 1rem 2rem 1rem 4.5rem;
+  }
 }

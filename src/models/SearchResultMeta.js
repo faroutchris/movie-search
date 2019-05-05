@@ -1,7 +1,36 @@
 class SearchResultMeta {
-  constructor(currentPage, pages) {
+  constructor(currentPage, totalPages, totalResults) {
     this.currentPage = currentPage;
-    this.pages = pages;
+    this.totalPages = totalPages;
+    this.totalResults = totalResults;
+  }
+
+  get totalResultsFound() {
+    return this.totalResults > 0
+      ? `Found ${this.totalResults} titles`
+      : "No results found";
+  }
+
+  get paginationInfo() {
+    return this.totalResults > 0
+      ? `Page ${this.currentPage} / ${this.totalPages}`
+      : null;
+  }
+
+  get next() {
+    if (this.totalPages > this.currentPage) {
+      return this.currentPage + 1;
+    } else {
+      return null;
+    }
+  }
+
+  get prev() {
+    if (this.currentPage !== 1) {
+      return this.currentPage - 1;
+    } else {
+      return null;
+    }
   }
 }
 

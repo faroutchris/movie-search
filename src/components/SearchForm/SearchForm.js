@@ -1,23 +1,26 @@
-import React, { useRef } from "react";
-import { Redirect } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigation } from "react-navi";
 import "./SearchForm.css";
 
-const SearchForm = ({ setQuery, onSearch }) => {
-  const searchRef = useRef(null);
+const SearchForm = props => {
+  const [query, setQuery] = useState(props.query || "");
+  const navigation = useNavigation();
 
-  const handleSearch = event => {
-    onSearch(event);
-    return <Redirect to="/" />;
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const encQuery = encodeURIComponent(query);
+    navigation.navigate(`/search/1?q=${encQuery}`);
   };
 
   return (
-    <form className="form" onSubmit={handleSearch}>
+    <form className="form" onSubmit={handleSubmit}>
       <input
         className="search"
-        ref={searchRef}
         type="search"
         placeholder="Search movies."
-        onChange={() => setQuery(searchRef.current.value)}
+        value={query}
+        onChange={e => setQuery(e.target.value)}
       />
     </form>
   );

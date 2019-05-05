@@ -17,17 +17,17 @@ const Item = ({ result }) => (
 
       <p className="overview">{result.overview}</p>
 
-      <div className="genre-container">
+      <ul className="genre-container">
         {result.genres.map((genre, i) => (
-          <span
+          <li
             className="genre"
             key={i}
             style={{ backgroundColor: `${genre.color}` }}
           >
             {genre.name}
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   </div>
 );

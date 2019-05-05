@@ -1,4 +1,4 @@
-import missingPoster from "./../assets/missing-poster.png";
+import missingPoster from "./../assets/missing.svg";
 import { GENRES } from "../constants";
 
 export default class SearchResult {

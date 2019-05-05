@@ -15,7 +15,7 @@ const StarRating = ({ score }) => {
     }
   }
 
-  return stars;
+  return stars.length > 0 ? stars : "No rating";
 };
 
 export default StarRating;

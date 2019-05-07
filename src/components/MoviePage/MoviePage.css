@@ -1,8 +1,82 @@
+.movie-container .cast-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 5rem;
+}
+
+.movie-container .year {
+  font-weight: lighter;
+}
+
+.movie-container .details {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
 .movie-container .poster {
-  width: 35%;
+  width: 40%;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.movie-container .article {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.movie-container .article-paragraph {
+  line-height: 1.6;
+}
+
+.movie-container .article-info {
+}
+
+.movie-container .stars {
+  margin: 2rem 0;
+}
+
+.movie-container .votes {
+  display: block;
+}
+
+.movie-container .genre-container {
+}
+
+.movie-container .cast-member {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cast-member-profile {
+  position: relative;
+  padding-bottom: 150%;
+  overflow: hidden;
+  width: 120px;
+  border-radius: 8px;
+  background: black;
+}
+
+.movie-container .cast-member-profile-img {
+  position: absolute;
+  width: 100%;
+}
+.movie-container .cast-member-actor {
+  font-size: 0.85rem;
+}
+.movie-container .cast-member-character {
+  font-size: 0.85rem;
 }
 @media screen and (min-width: 600px) {
   .movie-container .poster {
     width: 25%;
+    margin-right: 2rem;
+    flex-shrink: 0;
+  }
+
+  .movie-container .article {
+    width: 100%;
   }
 }

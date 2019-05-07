@@ -1,10 +1,11 @@
 import missingPoster from "./../assets/missing.svg";
+import missingActor from "./../assets/missing-actor.svg";
 import { GENRES } from "../constants";
 
 /* --------------------------------------------------------------------
- | This model shares a lot of methods/getters with SearchResultItem.js
- | A possible approach is to extract these methods in another class
- | and provide them to both models in the constructor. For profit
+ | This model shares a few of its methods with SearchResultItem.js
+ | A possible approach to fix this is to extract these methods into
+ | a shared class and provide them to both models in the constructor.
  ---------------------------------------------------------------------- */
 
 export default class MovieAsset {
@@ -74,7 +75,7 @@ export default class MovieAsset {
     const count = this.movie.vote_count;
 
     if (count === 0) {
-      return "No rating";
+      return "";
     }
     if (count === 1) {
       return "1 vote";
@@ -102,7 +103,9 @@ export default class MovieAsset {
     return {
       character: cast.character,
       actor: cast.name,
-      profile: `http://image.tmdb.org/t/p/w185${cast.profile_path}`
+      profile: cast.profile_path
+        ? `http://image.tmdb.org/t/p/w185${cast.profile_path}`
+        : missingActor
     };
   }
 

@@ -17,6 +17,24 @@
   margin-right: 0.25rem;
 }
 
+.genre-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.genre {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.15rem 0.25rem;
+  color: #fff;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+}
+
 @media screen and (min-width: 600px) {
   .poster {
     width: 25%;

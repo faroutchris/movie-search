@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-navi";
 import StarRating from "../Shared/StarRating";
 import PosterImage from "../Shared/PosterImage";
+import GenresList from "../Shared/GenresList";
 
 const Item = ({ result }) => (
   <Link className="result-item" href={`/movie/${result.id}`}>
@@ -18,17 +19,7 @@ const Item = ({ result }) => (
 
       <p className="overview">{result.overview}</p>
 
-      <ul className="genre-container">
-        {result.genres.map((genre, i) => (
-          <li
-            className="genre"
-            key={i}
-            style={{ backgroundColor: `${genre.color}` }}
-          >
-            {genre.name}
-          </li>
-        ))}
-      </ul>
+      <GenresList genres={result.genres} />
     </div>
   </Link>
 );

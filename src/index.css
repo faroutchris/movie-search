@@ -25,6 +25,16 @@ code {
     monospace;
 }
 
+.loader {
+  text-align: center;
+  margin: 4rem;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 100%; /* chrome bug not respecting rem on body? */

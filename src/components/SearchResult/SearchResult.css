@@ -62,42 +62,38 @@
   line-height: 1.5rem;
 }
 
-.result-item .genre-container {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0;
-  list-style: none;
-}
-
-.result-item .genre {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: bold;
-  padding: 0.15rem 0.25rem;
-  color: #fff;
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
-  border-radius: 4px;
-}
-
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  width: 240px;
+  text-align: center;
   margin-bottom: 5rem;
 }
 
+.pagination a {
+  display: inline-block;
+}
+
 .pagination-text {
+  position: relative;
+  top: 2rem;
+  vertical-align: top;
   font-weight: bold;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.5);
-  vertical-align: middle;
 }
 
 .pagination-icon {
   height: 24px;
   margin: 2rem;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pagination-empty {
+  display: inline-block;
+  height: 24px;
+  margin: 2rem;
 }
 
 .result-item .genre:nth-child(n + 4) {

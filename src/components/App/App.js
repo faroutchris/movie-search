@@ -2,6 +2,7 @@ import React from "react";
 import { useCurrentRoute, useLoadingRoute } from "react-navi";
 import SearchForm from "./../SearchForm/SearchForm";
 import Loader from "./../Loader/Loader";
+import attribution from "./../../assets/attribution.svg";
 import "./App.css";
 
 const App = ({ children }) => {
@@ -15,14 +16,19 @@ const App = ({ children }) => {
       <header>
         <SearchForm query={currentRoute ? currentRoute.url.query.q : ""} />
       </header>
-      {loadingRoute ? (
-        <Loader />
-      ) : (
+
+      <Loader isLoading={loadingRoute} delayMs={300}>
         <>
           <main>{children}</main>
-          <footer>Powered by themoviedatabase.com</footer>
+          <footer className="footer">
+            <img
+              src={attribution}
+              alt="Powered by themoviedb.com"
+              width="240"
+            />
+          </footer>
         </>
-      )}
+      </Loader>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const List = ({ next, prev, text }) => {
 
   return (
     <div className="pagination">
-      {prev && (
+      {prev ? (
         <Link href={`/search/${prev}${search}`}>
           <img
             className="pagination-icon"
@@ -19,6 +19,8 @@ const List = ({ next, prev, text }) => {
             alt="Previous Page"
           />
         </Link>
+      ) : (
+        <div className="pagination-empty" />
       )}
       <span className="pagination-text">{text}</span>
       {next && (

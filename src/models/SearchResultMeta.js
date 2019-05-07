@@ -13,7 +13,7 @@ class SearchResultMeta {
 
   get paginationInfo() {
     return this.totalResults > 0
-      ? `Page ${this.currentPage} / ${this.totalPages}`
+      ? `${this.currentPage} / ${this.totalPages}`
       : null;
   }
 

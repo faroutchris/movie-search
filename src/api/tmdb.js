@@ -10,3 +10,10 @@ export const searchMovies = (query, page = 1) => {
     api_key: key
   });
 };
+
+export const getMovieById = id => {
+  return apport.get(`${endpoint}/movie/${id}`, {
+    append_to_response: encodeURIComponent("credits,videos,recommendations"),
+    api_key: key
+  });
+};

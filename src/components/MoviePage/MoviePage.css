@@ -1,0 +1,8 @@
+.movie-container .poster {
+  width: 35%;
+}
+@media screen and (min-width: 600px) {
+  .movie-container .poster {
+    width: 25%;
+  }
+}

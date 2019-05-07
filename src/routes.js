@@ -1,13 +1,20 @@
 import React from "react";
-import { lazy, mount, route } from "navi";
-import { useCurrentRoute } from "react-navi";
-import Root from "./components/Root/Root";
-import { searchMovies } from "./api/tmdb";
+import { mount, route } from "navi";
+import { searchMovies, getMovieById } from "./api/tmdb";
+import SearchResult from "./components/SearchResult/SearchResult";
+import MoviePage from "./components/MoviePage/MoviePage";
 import SearchResultItem from "./models/SearchResultItem";
 import SearchResultMeta from "./models/SearchResultMeta";
+import MovieAsset from "./models/MovieAsset";
+
+import logo from "./assets/logo.svg";
 
 const Test = () => {
-  return <div>Välkommen</div>;
+  return (
+    <div>
+      <img src={logo} alt="" />
+    </div>
+  );
 };
 
 // Define your routes
@@ -17,8 +24,6 @@ const routes = mount({
     view: <Test />
   }),
   "/search/:page": route(async req => {
-    console.log("params", req.params);
-
     let { q, page } = req.params;
 
     const response = await searchMovies(q, page);
@@ -35,7 +40,18 @@ const routes = mount({
 
     return {
       title: `${q} - Page ${page}`,
-      view: <Root searchResults={results} searchMeta={meta} />
+      view: <SearchResult searchResults={results} searchMeta={meta} />
+    };
+  }),
+  "/movie/:id": route(async req => {
+    let { id } = req.params;
+
+    const response = await getMovieById(id);
+    const movie = new MovieAsset(response);
+
+    return {
+      title: `${movie.title}`,
+      view: <MoviePage movie={movie} />
     };
   })
 });

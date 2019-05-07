@@ -1,7 +1,7 @@
 import React from "react";
 import StarFull from "./../../assets/star-full.svg";
 import StarHalf from "./../../assets/star-half.svg";
-import "./SearchResult.css";
+import "./Shared.css";
 
 const StarRating = ({ score }) => {
   const stars = [];

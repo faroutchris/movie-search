@@ -1,14 +1,18 @@
 import React from "react";
-import Item from "./Item";
-
-const SearchResult = ({ searchResults = [], pages = 1 }) => {
+import List from "./List";
+import TotalResults from "./TotalResults";
+import Pagination from "./Pagination";
+const SearchResult = ({ searchResults, searchMeta }) => {
   return (
-    <div>
-      {searchResults.map(result => (
-        <Item key={result.id} result={result} />
-      ))}
-    </div>
+    <>
+      <TotalResults text={searchMeta.totalResultsFound} />
+      <List searchResults={searchResults} />
+      <Pagination
+        next={searchMeta.next}
+        prev={searchMeta.prev}
+        text={searchMeta.paginationInfo}
+      />
+    </>
   );
 };
-
 export default SearchResult;

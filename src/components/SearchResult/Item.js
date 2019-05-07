@@ -1,10 +1,11 @@
 import React from "react";
-import StarRating from "./StarRating";
-import PosterImage from "./PosterImage";
+import { Link } from "react-navi";
+import StarRating from "../Shared/StarRating";
+import PosterImage from "../Shared/PosterImage";
 
 const Item = ({ result }) => (
-  <div className="item">
-    <PosterImage alt={result.title} src={result.poster} />
+  <Link className="result-item" href={`/movie/${result.id}`}>
+    <PosterImage alt={result.title} src={result.poster} className="poster" />
     <div className="details">
       <div className="title-container">
         <h2 className="title">{result.title}</h2>
@@ -29,7 +30,7 @@ const Item = ({ result }) => (
         ))}
       </ul>
     </div>
-  </div>
+  </Link>
 );
 
 export default Item;

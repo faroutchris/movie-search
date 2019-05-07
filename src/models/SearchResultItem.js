@@ -55,7 +55,8 @@ export default class SearchResult {
   }
 
   get overview() {
-    return this.data.overview.slice(0, 120) + "...";
+    const overview = this.data.overview;
+    return overview.length > 120 ? overview.slice(0, 120) + "..." : overview;
   }
 
   mapVoteToScore(value) {

@@ -10,7 +10,9 @@ const SearchForm = props => {
     event.preventDefault();
 
     const encQuery = encodeURIComponent(query);
-    navigation.navigate(`/search/1?q=${encQuery}`);
+    if (encQuery.trim()) {
+      navigation.navigate(`/search/1?q=${encQuery}`);
+    }
   };
 
   return (

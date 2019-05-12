@@ -7,7 +7,7 @@ import arrowNext from "./../../assets/arrow-next.svg";
 const List = ({ next, prev, text }) => {
   const currentRoute = useCurrentRoute();
 
-  const search = currentRoute.url.search || null;
+  const search = (currentRoute && currentRoute.url.search) || null;
 
   return (
     <div className="pagination">

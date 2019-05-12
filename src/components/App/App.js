@@ -1,15 +1,13 @@
 import React from "react";
 import { useCurrentRoute, useLoadingRoute } from "react-navi";
-import SearchForm from "./../SearchForm/SearchForm";
-import Loader from "./../Loader/Loader";
+import SearchForm from "./../Shared/SearchForm";
+import Loader from "../UIStates/Loader/Loader";
 import attribution from "./../../assets/attribution.svg";
 import "./App.css";
 
 const App = ({ children }) => {
   const currentRoute = useCurrentRoute();
   const loadingRoute = !!useLoadingRoute();
-
-  console.log(loadingRoute);
 
   return (
     <div className="app">

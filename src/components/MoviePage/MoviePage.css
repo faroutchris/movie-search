@@ -16,6 +16,10 @@
   margin-bottom: 4rem;
 }
 
+.movie-container .details h1 {
+  font-size: 1.2rem;
+}
+
 .movie-container .poster {
   width: 40%;
   margin-right: 2rem;
@@ -50,6 +54,7 @@
   margin-bottom: 1rem;
 }
 
+/* has some weird visual bugs sometimes. need a better technique*/
 .cast-member-profile {
   position: relative;
   padding-bottom: 150%;
@@ -63,12 +68,21 @@
   position: absolute;
   width: 100%;
 }
+
 .movie-container .cast-member-actor {
   font-size: 0.85rem;
 }
+
 .movie-container .cast-member-character {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
+
+@media screen and (min-width: 480px) {
+  .movie-container .details h1 {
+    font-size: 1.6rem;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .movie-container .poster {
     width: 25%;
@@ -78,5 +92,9 @@
 
   .movie-container .article {
     width: 100%;
+  }
+
+  .movie-container .details h1 {
+    font-size: 2rem;
   }
 }

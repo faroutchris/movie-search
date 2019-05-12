@@ -1,3 +1,8 @@
+export const ERRORCODES = {
+  NOTFOUND: 404,
+  UNPROCESSABLE: 422
+};
+
 export const GENRES = [
   {
     id: 28,

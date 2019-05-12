@@ -5,7 +5,8 @@ import { GENRES } from "../constants";
 /* --------------------------------------------------------------------
  | This model shares a few of its methods with SearchResultItem.js
  | A possible approach to fix this is to extract these methods into
- | a shared class and provide them to both models in the constructor.
+ | a shared class and provide the shared class in the constructor.
+ | This would allow us to defer to shared methods.
  ---------------------------------------------------------------------- */
 
 export default class MovieAsset {

@@ -1,5 +1,5 @@
-import { config } from "./../config";
-import { apport } from "./../libs/apport";
+import { config } from "../config";
+import { apport } from "../libs/apport";
 
 const { endpoint, key } = config.tmdb;
 

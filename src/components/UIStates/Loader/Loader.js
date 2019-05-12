@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import loader from "./../../assets/loader.svg";
+import loader from "./../../../assets/loader.svg";
 
 const Loader = ({ children, isLoading, delayMs }) => {
   const [show, setShow] = useState(false);

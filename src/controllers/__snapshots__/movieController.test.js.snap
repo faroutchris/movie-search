@@ -1,0 +1,330 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movieController Renders a <MovieComponent> in route.view 1`] = `
+<div
+  className="movie-container"
+>
+  <div
+    className="details"
+  >
+    <div
+      className="poster poster-image"
+    >
+      <div
+        className="image-container"
+      >
+        <img
+          alt="Solo: A Star Wars Story"
+          className="image"
+          src="http://image.tmdb.org/t/p/w300/3IGbjc5ZC5yxim5W0sFING2kdcz.jpg"
+        />
+      </div>
+    </div>
+    <div>
+      <h1>
+        Solo: A Star Wars Story
+         
+        <span
+          className="year"
+        >
+          (
+          2018
+          )
+        </span>
+      </h1>
+      <div
+        className="stars"
+      >
+        <img
+          alt={3.5}
+          className="star"
+          src="star-full.svg"
+        />
+        <img
+          alt={3.5}
+          className="star"
+          src="star-full.svg"
+        />
+        <img
+          alt={3.5}
+          className="star"
+          src="star-full.svg"
+        />
+        <img
+          alt={3.5}
+          className="star"
+          src="star-half.svg"
+        />
+        <span
+          className="votes"
+        >
+          3678 votes
+        </span>
+      </div>
+      <ul
+        className="genre-container"
+      >
+        <li
+          className="genre"
+          style={
+            Object {
+              "backgroundColor": "#6DC385",
+            }
+          }
+        >
+          Action
+        </li>
+        <li
+          className="genre"
+          style={
+            Object {
+              "backgroundColor": "#7371F4",
+            }
+          }
+        >
+          Adventure
+        </li>
+        <li
+          className="genre"
+          style={
+            Object {
+              "backgroundColor": "#F47198",
+            }
+          }
+        >
+          Science Fiction
+        </li>
+      </ul>
+    </div>
+  </div>
+  <article
+    className="article"
+  >
+    <p
+      className="article-paragraph"
+    >
+      Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian.
+    </p>
+    <span
+      className="article-info"
+    >
+      Release date: 
+      2018-05-15
+    </span>
+  </article>
+  <h2>
+    Cast
+  </h2>
+  <ul
+    className="cast-list"
+  >
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Alden Ehrenreich"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/hPbiRySz3k5XEZ3DwJtExnNTKiG.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Alden Ehrenreich
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Han Solo
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Joonas Suotamo"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/qzUsjyKkh1G07SFSsXwo4t7vGpv.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Joonas Suotamo
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Chewbacca
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Emilia Clarke"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/j7d083zIMhwnKro3tQqDz2Fq1UD.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Emilia Clarke
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Qi'ra
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Woody Harrelson"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/1ecdooAHICUhCZKKEKlFtccEmTU.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Woody Harrelson
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Tobias Beckett
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Donald Glover"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/36o5mpbQVdxOf9kUxWw7SllOuk.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Donald Glover
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Lando Calrissian
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Phoebe Waller-Bridge"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/ppRIfUYcl0RWlxp5gSmdzIFFLAS.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Phoebe Waller-Bridge
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        L3-37
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Paul Bettany"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/1zmr8C7TCqsoCjDVKJycVp2wWyf.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Paul Bettany
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Dryden Vos
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Erin Kellyman"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/f7XXomAaSRxE3h5NT0sAlcQTjPL.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Erin Kellyman
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Enfys Nest
+      </span>
+    </li>
+    <li
+      className="cast-member"
+    >
+      <div
+        className="cast-member-profile"
+      >
+        <img
+          alt="Thandie Newton"
+          className="cast-member-profile-img"
+          src="http://image.tmdb.org/t/p/w185/sW6XsnM2DkX6ujOXZ38aIQAMIWi.jpg"
+        />
+      </div>
+      <h3
+        className="cast-member-actor"
+      >
+        Thandie Newton
+      </h3>
+      <span
+        className="cast-member-character"
+      >
+        Val
+      </span>
+    </li>
+  </ul>
+</div>
+`;

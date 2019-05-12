@@ -2,7 +2,9 @@ const checkServerResponse = res => {
   if (res.ok) {
     return res;
   } else {
-    throw new Error(`Request rejected with status ${res.status}`);
+    let error = new Error(`Request rejected with status ${res.status}`);
+    error.code = res.status;
+    throw error;
   }
 };
 

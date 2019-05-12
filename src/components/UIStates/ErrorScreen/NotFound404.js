@@ -4,6 +4,8 @@ const NotFound = () => (
   <div>
     <h1>404 Not found</h1>
     <Link href="/">Back to start page</Link>
+    <br />
+    <br />
   </div>
 );
 
